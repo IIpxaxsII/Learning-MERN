@@ -1,26 +1,26 @@
-// console.log("hello");
+/*console.log("hello");
 
-// const PI = 3.14;
-// let name = paras;
-// var a = 10;
+const PI = 3.14;
+let name = paras;
+var a = 10;
  
 
-// const product = {
-//      name: "Ball pen",
-//      rating:4,
-//      offer:5,
-//      price:270,
-//      isDeal: true
+const product = {
+     name: "Ball pen",
+     rating:4,
+     offer:5,
+     price:270,
+     isDeal: true
 
 
-// };
+};
 
-// console.log(product);
+console.log(product);
 
 
  const profile = {
      name: "Shradha Khapra",
-     BigInt: 569,
+     followers: 569,
      following: 5,
      description: "Apna college",
      isfollowing: false
@@ -29,3 +29,127 @@
 };
 
 console.log(profile);
+
+//          Arthimetic operators
+            let a = 5;
+            let b = 6;
+
+            console.log("a + b:", a+b)
+//stict comparison operator(===)
+let a = 5;
+let b = "5";
+console.log(a===b);
+console.log(a!==b);
+
+
+let age = 12;
+if(age > 18 ){
+    console.log("eligible")
+}else{
+    console.log("not eligible")
+}
+//ternary op
+let age = 12;
+console.log(age > 18 ? "adult": "Not adult")
+
+alert("Welcome!")
+
+
+//prompt
+let input = prompt("Enter a number: ");
+if(input % 5 === 0 ){
+    alert("Multiple of 5")
+}else{
+        alert("Not a Multiple of 5")
+}
+
+//for-of loops(strings and arrays)
+str = "Paras Bindra"
+for(let i of str){
+    console.log(i)
+}
+   //for-in loop
+  let student = {
+    name : "rahul kumar",
+    age: 12,
+    cgpa: 7.8
+  } 
+
+  for(let key in student){
+    console.log(key,":", (student[key]))
+  }
+    
+  
+ //practice ques
+    let mynum = 0;
+    var input = prompt("Guess a number between (1-10) : ");
+     let i = 2;
+
+while(input != mynum && i > 0){
+    input = prompt("Wrong! Guess again. "+ i +" chance(s) left: ");
+    
+i--;
+
+ }
+if(input == mynum){
+    alert("You guessed the number correctly!");
+} else {
+    alert("Your chances are exhausted.");
+}
+    
+
+//strings
+let str = "hello"
+let len = str.length;
+console.log(len);
+
+//template literals
+let a = 5;
+let b = 10;
+
+let output = `The value of a is ${a} and that of b is ${b} and there sum is ${a+b}`;
+console.log(output)
+
+//escape characters(\n,\t, )
+
+//practice ques
+
+let name = prompt("Enter your Full name: ");
+let length  = name.length;
+let username = `@${name}${length}`;
+console.log(username);
+
+let arr = [1,2,3,4,5,6,7,8,9,0,9,8,7,6,5,4,3,2]
+i = 0;
+while(i<18){
+    console.log(arr[i])
+    i++
+}
+    
+   //practice ques
+   let arr = [85,97,44,37,76,60]
+   let sum = 0;
+   let len = arr.length
+   for(let i=0;i<len;i++){
+
+        sum += arr[i];
+
+   }
+      
+     console.log(len)
+
+    console.log(sum)
+    console.log(`Average is: ${(sum/len)}`)
+    */
+
+    //ques
+    let arr = [250,645,300,900,50]
+    for(i in arr){
+        let off = 0.1*(arr[i]);
+        let newPrice = arr[i] - off;
+        arr[i] = newPrice;
+       
+    }
+   
+        console.log(arr)
+
