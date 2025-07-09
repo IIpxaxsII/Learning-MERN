@@ -140,7 +140,7 @@ while(i<18){
 
     console.log(sum)
     console.log(`Average is: ${(sum/len)}`)
-    */
+    
 
     //ques
     let arr = [250,645,300,900,50]
@@ -152,4 +152,61 @@ while(i<18){
     }
    
         console.log(arr)
+let arr = ["Bloomberg", "Microsoft", "Uber","Google", "IBM", "Netflix"]
+//console.log(arr.splice(1)) //can use shift also
+arr.splice(2,1,"Ola")
+console.log(arr)
+arr.push("Amazon")
+console.log(arr)
+FUNCTIONS
 
+function myFunction(msg){
+    console.log(msg)
+
+}
+
+myFunction("Love");
+
+function mySum( a,b) {
+    sum = a + b
+    return sum;
+ }
+val = mySum(2,5)
+console.log(val)
+
+Arrow functions
+
+const arrowSum = (a,b)=>{
+    console.log(a+b)
+}
+
+arrowSum(2,2)
+
+function vowels(msg){
+    let count = 0;
+    msg1 = msg.toLowerCase()
+    for(j of msg1){
+        if(j==="a"||j==="e"||j==="i"||j==='o'||j==='u'){
+            count++
+            
+        
+        }
+    }
+return count;
+}
+
+
+val = vowels("PARAS")
+console.log(val)
+//A callback function is function which is passed as an argument to another function
+let arr = [1,2,3,4,5]
+arr.forEach((val)=>{
+    console.log(val*val)
+})
+    */
+let arr = [1,2,3,4,5,6,7,8,9,10,12]
+let newArr = arr.filter((val)=>{
+    return val%2===0
+})
+
+console.log(newArr)
