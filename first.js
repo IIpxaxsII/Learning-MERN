@@ -267,4 +267,57 @@ btn1.addEventListener("click",() => {
     }
 
 })
-    */
+    
+const object = {
+    fullName : "paras",
+    marks : 94,
+    printMarks: function ()  {
+    console.log("marks: ",this.marks)
+
+    }
+
+}
+object.printMarks()
+
+class car{
+    constructor(){
+        console.log("called")
+    }
+    start(){
+        console.log("start")
+    }
+    stop(){
+        console.log("stop")
+    }
+}
+
+let fortuner = new car()
+console.log(fortuner.start())
+*/
+
+class person{
+    eat(){
+        console.log("eating")
+    }
+     sleep(){
+        console.log("sleeping")
+     }
+     dancing(){
+        console.log("dancing")
+     }
+}
+class adi extends person{
+
+}
+class riya extends person{}
+
+let a1 =new adi()
+let a2 =new adi()
+
+let r1 = new riya()
+let r2 = new riya()
+
+a1.dancing()
+a2.eat()
+r1.sleep()
+r2.dancing()
