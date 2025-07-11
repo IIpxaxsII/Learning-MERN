@@ -203,10 +203,68 @@ let arr = [1,2,3,4,5]
 arr.forEach((val)=>{
     console.log(val*val)
 })
-    */
+    
 let arr = [1,2,3,4,5,6,7,8,9,10,12]
 let newArr = arr.filter((val)=>{
     return val%2===0
 })
 
 console.log(newArr)
+
+
+//Dom manipulation
+let elements = document.querySelector("h1")
+console.dir(elements)
+
+let elementsAll = document.querySelectorAll("h1")
+console.dir(elements)
+
+let heading = document.querySelector("h1")
+console.dir(heading)
+
+//practice ques
+let newBtn = document.createElement("button")
+console.log(newBtn)
+newBtn.innerText = "Click me!"
+newBtn.style.backgroundColor = "red"
+newBtn.style.color = "white"
+newBtn.style.fontSize = 
+document.querySelector("body").prepend(newBtn)
+
+//Events
+let btn1 = document.querySelector("#btn1")
+btn1.onclick = ()=>{
+    console.log("Button was clicked!")
+
+}
+
+let btn2 = document.querySelector("#btn2")
+btn2.ondblclick = ()=>{
+    console.log("Button was double clicked!")
+}
+//Event  listeners
+let btn1 = document.querySelector("#btn1")
+btn1.onclick = ()=>{
+    console.log("Button was clicked!")
+
+}
+btn1.addEventListener("click", ()=>{
+    console.log("Function on click was run!")})
+
+    btn1.addEventListener("click", ()=>{
+    console.log("Event handler two was triggered!")})
+        
+let btn1 = document.querySelector("#screenColor")
+    let currMode = "light";
+
+btn1.addEventListener("click",() => {
+    if(currMode === "light"){
+        currMode = "dark";
+        document.querySelector("body").style.backgroundColor = "grey"
+    }else{
+        currMode = "light";
+        document.querySelector("body").style.backgroundColor = "bisque"
+    }
+
+})
+    */
