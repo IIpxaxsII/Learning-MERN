@@ -293,8 +293,9 @@ class car{
 
 let fortuner = new car()
 console.log(fortuner.start())
-*/
 
+
+//inheritance
 class person{
     eat(){
         console.log("eating")
@@ -321,3 +322,78 @@ a1.dancing()
 a2.eat()
 r1.sleep()
 r2.dancing()
+
+//asynchronous programming
+console.log("1")
+console.log("2")
+console.log("3")
+
+setTimeout(()=>{
+    console.log(
+        "hello"
+    )
+},5000)
+console.log("4")
+
+console.log("5")
+
+
+
+//callback hell
+function getData(dataId, getNextData){
+    setTimeout(()=>{
+    console.log("data: ", dataId)
+    if(getNextData){
+    getNextData()
+    }else{
+        console.log("excecution completed")
+    }
+},2000)
+
+}
+getData(1,()=>{
+    getData(2,()=>{
+        getData(3,()=>{
+            getData(4,)
+        })
+    })
+})
+    
+
+//promises
+let promise = getPromise =()=>{
+    return new Promise((resolve,reject)=>{
+   setTimeout(()=>{
+    console.log("I  am a promise")
+   },5000)
+    resolve("Success")
+    //reject("some error")
+})}
+
+let promise2 = getPromise()
+    promise2.then(()=>{
+        console.log("success")})
+*/
+
+function asyncFun1(){
+    return new Promise((resolve,reject)=>{
+
+    setTimeout(()=>{
+        console.log("data1")
+        resolve("success") },4000) })
+}
+
+function asyncFun2(){
+    return new Promise((resolve,reject)=>{
+
+    setTimeout(()=>{
+        console.log("data2")
+        resolve("success") },4000) })
+}
+
+console.log("fetching data1...")
+asyncFun1().then((res)=>{
+    console.log("fetching data 2...")
+    asyncFun2().then((res)=>{})
+    
+})
