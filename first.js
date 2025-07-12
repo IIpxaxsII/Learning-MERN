@@ -398,7 +398,7 @@ asyncFun1().then((res)=>{
     asyncFun2().then((res)=>{})
     
 })
-        */
+        
 //async await
 function getData(data){
     return new Promise((resolve,reject)=>{
@@ -422,3 +422,22 @@ async function printData(){
 
 }
 printData()
+*/
+
+//API
+URL = "https://catfact.ninja/fact"
+let btn = document.querySelector("#btn")
+let catPara = document.querySelector("#catPara")
+
+
+
+const getFacts= async ()=>{
+    let response = await fetch(URL)
+    let data = await response.json()
+    let fact = data.fact
+    console.log(fact) 
+    catPara.innerText = fact
+
+}
+btn.addEventListener("click",getFacts()
+)
